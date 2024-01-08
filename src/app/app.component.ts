@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BaseService } from './base.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'SzabaduloszobaSzinyeiMikes';
+
+  constructor(
+    private baseService:BaseService
+  ) {
+    this.baseService.getFoglalasok().subscribe(
+      (response)=>{
+        console.log(response)
+      }
+    )
+  }
 }
