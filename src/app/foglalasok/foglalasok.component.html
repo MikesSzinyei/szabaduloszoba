@@ -1,3 +1,17 @@
 
 
-asdasd
+<div class="container">
+
+    <table class="table table-bordered">
+
+        <tbody>
+            <tr *ngFor="let dt of foglalasokData" >
+                <td>{{dt?.datum}}</td>
+                <td>{{dt?.nev}}</td>
+                <td>{{dt?.fo}}</td>
+                <td>{{dt?.helyszin}}</td>
+                <td>{{dt?.iranyitoszam}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
